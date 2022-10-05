@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- write the Flipflops packege declaration
+package Flipflops is
+component dff_set is port(D,clock,set:in std_logic;Q:out std_logic);
+end component dff_set;
+
+component dff_reset is port(D,clock,reset:in std_logic;Q:out std_logic);
+end component dff_reset;
+end package Flipflops;
+
+entity Sequence_generator_stru_dataflow is
+
+port (reset,clock: in std_logic;
+y:out std_logic);
+
+end entity Sequence_generator_stru_dataflow;
+
+architecture struct of Sequence_generator_stru_dataflow is
+signal D :std_logic_vector(...);
+signal Q:std_logic_vector(...);
+begin
+-- write the equations in dataflow e.g z=a+bc written as z <= a or (b and c)
+-- for DFF inputs which was derived and also for y.
+-- Instantiate components dff_reset
+-- and dff_set appropriately using port map statements.
+end struct;
